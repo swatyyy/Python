@@ -33,6 +33,7 @@ Rahul
 
 """
 
+
 print(g)
 
 
@@ -40,6 +41,8 @@ print("This is Rahul's \"New\" house")
 
 
 name="Rahul"
+#     012345
+#   - 54321
 
 print(name[1:4:2])
 print(name[::-1])

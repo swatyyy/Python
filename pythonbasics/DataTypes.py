@@ -1,7 +1,7 @@
 """
 Datatypes:
     1. List
-    2. Tuple
+    2. Tuple/set
     3. Dictionary
 
 """
