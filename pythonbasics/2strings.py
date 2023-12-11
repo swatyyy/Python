@@ -21,3 +21,4 @@ print(type(age))
 age_in_words = "2 years"
 print(name + " is " + age_in_words + " years old")
 print(type(age))
+#Once understood Refere 3Strings2.py

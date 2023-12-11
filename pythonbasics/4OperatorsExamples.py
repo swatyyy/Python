@@ -5,7 +5,7 @@
 """"
 
 1. Arithmetic
-2. Comparison
+2. Comparison or relational expressions
 3. Equality
 4. Logical
 5. Bitwise
@@ -45,7 +45,9 @@ print(a//b)
 """
 
 2. Comparison Operators
-
+In these types of expressions, arithmetic expressions are written on both sides of relational operator (> , < , >= , <=). 
+Those arithmetic expressions are evaluated first, and then compared as per relational operator and produce a boolean output in the end. 
+These expressions are also called Boolean expressions.
     a. Greater than (>)
     b. Greater than equal to (>=)
     c. Less than (<)
@@ -92,7 +94,7 @@ print(10<20<30<40)
 """
 """
 
-3. Equality Operators
+3. Equality Operators 
     a. Equal to (==)
     b. Not Equal to (!=)
 
@@ -117,7 +119,11 @@ print("Way2Automation" == "Way2Automation")
 """
 
 4. Logical Operators
-
+These are kinds of expressions that result in either True or False. It basically specifies one or more conditions.
+ For example, (10 == 9) is a condition if 10 is equal to 9. As we know it is not correct, so it will return False. 
+ Studying logical expressions, we also come across some logical operators which can be seen in logical expressions most often.
+ Here are some logical operators in Python:
+ 
     a. And --> Return true whenever both the arguments are true in nature
     b. Or --> Return true, if atleast one argument is True
     c. Not --> return the reverse
@@ -167,6 +173,7 @@ print(not a==10)
 """
 """
 5. Bitwise Operators
+These are the kind of expressions in which computations are performed at bit level.
     a. Bitwise And (&)
     b. Bitwise Or (|)
     c. Bitwise XOR (^)
