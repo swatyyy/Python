@@ -19,19 +19,6 @@ parrot = "Norwegian Blue"
 #
 # print(parrot[:]) Norwegian Blue
 
-# Slice-back
-letters = "abcdefghijklmnopqrstuvwxyz"
-backwards = letters[::-1]
-print(backwards)
-
-
-#Negative Indexing in Strings - important topic
-parrot = "Norwegian Blue"
-#        -43210987654321
-#        1
-print(parrot[-14])
-
-
 print(parrot[10:13])
 print(parrot[:6] + parrot[6:])
 print(parrot[10:])

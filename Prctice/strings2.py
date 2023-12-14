@@ -27,9 +27,3 @@ parrot = "Norwegian Blue"
 #        -43210987654321
 #        1
 print(parrot[-14])
-
-#Slicing
-
-
-
-letters = "abcdefghijklmnopqrstuvwxyz"
