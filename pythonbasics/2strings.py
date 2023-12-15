@@ -19,6 +19,11 @@ print(type(greeting))
 print(type(age))
 
 age_in_words = "2 years"
+print(age_in_words)
 print(name + " is " + age_in_words + " years old")
 print(type(age))
+
+#to use Age variable u can use -f stings --------------Important
+
+print(name + f" is {age}  years old")
 #Once understood Refere 2Strings2.py
