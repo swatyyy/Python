@@ -12,3 +12,10 @@ if age < 16 or age > 65:
     print("Enjoy your free time")
 else:
     print("Have a good day at work")
+
+"""
+when comparing conditions using AND, Python will stop checking as soon as it finds a condition that is False
+
+When comparing conditions using OR, Python will stop checking as soon sa it finds a condition that is True
+
+"""
