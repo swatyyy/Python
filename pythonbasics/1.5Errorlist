@@ -1,0 +1,29 @@
+| **Error Name**                        | **Example Code**                     | **Original Error Message**                                          | **How to Fix / Notes**                                                           |
+| ------------------------------------- | ------------------------------------ | ------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| **SyntaxError**                       | `print("Hello World"`                | `SyntaxError: unexpected EOF while parsing`                         | Check missing parentheses, quotes, colons, or indentation.                       |
+| **IndentationError**                  | `if True:\nprint("Hi")`              | `IndentationError: expected an indented block`                      | Indent the code properly (4 spaces recommended).                                 |
+| **NameError**                         | `print(x)`                           | `NameError: name 'x' is not defined`                                | Make sure variable exists before using; check spelling.                          |
+| **TypeError**                         | `"25" + 5`                           | `TypeError: can only concatenate str (not "int") to str`            | Convert types appropriately (`int("25") + 5`).                                   |
+| **ValueError**                        | `int("abc")`                         | `ValueError: invalid literal for int() with base 10: 'abc'`         | Ensure string has a valid value for conversion.                                  |
+| **IndexError**                        | `[1, 2, 3][5]`                       | `IndexError: list index out of range`                               | Check list length before accessing index.                                        |
+| **KeyError**                          | `{"name":"Alice"}["age"]`            | `KeyError: 'age'`                                                   | Use `.get()` or check if key exists: `dict.get("age", default)`.                 |
+| **AttributeError**                    | `5.append(10)`                       | `AttributeError: 'int' object has no attribute 'append'`            | Check object type and method; only valid methods allowed.                        |
+| **ImportError / ModuleNotFoundError** | `import numpyy`                      | `ModuleNotFoundError: No module named 'numpyy'`                     | Correct spelling; install module using `pip install module_name`.                |
+| **ZeroDivisionError**                 | `5 / 0`                              | `ZeroDivisionError: division by zero`                               | Check denominator before dividing; cannot divide by zero.                        |
+| **FileNotFoundError**                 | `open("abc.txt")`                    | `FileNotFoundError: [Errno 2] No such file or directory: 'abc.txt'` | Check file path; use `try-except` to handle missing files.                       |
+| **KeyboardInterrupt**                 | Press Ctrl+C while running program   | `KeyboardInterrupt`                                                 | User manually stopped program; can handle with `try-except KeyboardInterrupt`.   |
+| **OverflowError**                     | `2.0**1000`                          | `OverflowError: (34, 'Numerical result out of range')`              | Number too large for Python float; use big integers or libraries like `decimal`. |
+| **MemoryError**                       | Creating huge list like `[0]*10**10` | `MemoryError`                                                       | Too much memory; optimize data structures or reduce size.                        |
+
+
+✅ Quick Tips to Remember:
+
+Read the error message → Python tells type, line number, and reason.
+
+Check variable types → Most TypeError/ValueError issues are type-related.
+
+Use try-except for errors like ValueError, FileNotFoundError, ZeroDivisionError.
+
+IDE hints → PyCharm shows errors underlined in red; hover to read.
+
+Test small code blocks → Helps catch errors early.

@@ -81,3 +81,9 @@ print('Hello, World!')
 # ✅ Reserved words → Future-safe words, don’t use them.
 # ✅ Variables → Dynamically typed, follow naming rules.
 # ✅ Use meaningful variable names (good practice).
+
+# Quick Recap Mnemonics
+# Constants → CAPS means Don’t Touch
+# Keywords → KEYS to Python’s grammar
+# Reserved Words → RESERVED like a cinema seat (not for you)
+# Variables → VAR = Vessel And Rules
