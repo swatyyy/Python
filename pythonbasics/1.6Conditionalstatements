@@ -1,0 +1,201 @@
+🔹 What Are Conditional Statements?
+
+Conditional statements allow your program to make decisions and execute code only if certain conditions are true.
+
+Python uses:
+
+if → checks a condition
+
+elif → checks another condition if previous if failed
+
+else → executes if all conditions are false
+
+1️⃣ Basic Syntax
+x = 10
+
+if x > 0:
+    print("Positive")
+elif x == 0:
+    print("Zero")
+else:
+    print("Negative")
+print('All done')
+
+
+Output:
+
+Positive
+All done
+
+
+Don’t forget:
+
+Colon : is mandatory after if, elif, and else.
+
+Indentation is mandatory (usually 4 spaces).
+
+2️⃣ Smart Things to Know
+a) Boolean Expressions
+
+Conditions must evaluate to True or False.
+
+Can use comparison operators:
+==, !=, >, <, >=, <=
+
+Can use logical operators: and, or, not
+
+age = 20
+if age > 18 and age < 30:
+    print("Young adult")
+
+b) Python allows short forms / one-liners
+x = 5
+print("Even") if x % 2 == 0 else print("Odd")
+
+c) Multiple conditions
+
+Use nested if statements carefully.
+
+x = 10
+if x > 0:
+    if x % 2 == 0:
+        print("Positive even")
+
+
+Or use elif chains for clarity.
+
+3️⃣ Comparison & Identity
+
+== → checks value equality
+
+is → checks if both variables point to the same object
+
+Smart to know difference:
+
+a = [1,2]
+b = [1,2]
+print(a == b)  # True (same value)
+print(a is b)  # False (different objects)
+
+4️⃣ Do’s and Don’ts
+✅ Do’s
+
+Always use meaningful conditions.
+
+Use elif instead of multiple if where only one condition should execute.
+
+Keep conditions readable; break complex ones into variables if needed.
+
+Test edge cases (like 0, negative numbers, empty lists).
+
+❌ Don’ts
+
+Don’t forget colons : after if, elif, else.
+
+Don’t mix tabs and spaces — Python will throw IndentationError.
+
+Don’t write if x = 5 → = is assignment, use ==.
+
+Avoid too many nested ifs → reduces readability.
+
+5️⃣ Advanced / Smart Things
+
+Truthy and Falsy values
+
+Python treats some values as False in conditions:
+0, 0.0, "", None, [], {}, set(), False
+
+0 (int)
+
+0.0 (float)
+
+"" (empty string)
+
+[] (empty list)
+
+{} (empty dict)
+
+set() (empty set)
+
+None
+
+False
+
+Everything else is True.
+
+eg1: Because instead of writing long conditions like:
+
+if len(my_list) > 0:
+    print("List not empty")
+
+
+You can just write:
+
+if my_list:
+    print("List not empty")
+
+
+Python automatically checks truthiness. ✔️
+
+my_list = []
+if my_list:
+    print("Not empty")
+else:
+    print("Empty")  # ✅ prints Empty
+
+
+Ternary operator (one-line if-else)
+
+status = "Adult" if age >= 18 else "Minor"
+
+
+Combine multiple conditions smartly
+
+score = 85
+if 80 <= score <= 100:
+    print("A grade")
+
+
+This avoids writing score >= 80 and score <= 100.
+
+Check membership
+
+Use in / not in to simplify checks:
+
+fruit = "apple"
+if fruit in ["apple", "banana", "mango"]:
+    print("Available")
+
+6️⃣ Don’t Forget Quick Checklist
+
+✅ Colons : after if, elif, else
+
+✅ Proper indentation (4 spaces)
+
+✅ Comparison vs assignment (== vs =)
+
+✅ Use elif instead of multiple if for exclusive conditions
+
+✅ Test edge/falsy values
+
+✅ Boolean operators (and, or, not)
+
+✅ Membership (in, not in)
+
+✅ Ternary operator for one-liners
+
+🔑 Mnemonic / Memory Trick
+
+“If Else Elif Decide True / False Clearly”
+
+If → check first condition
+
+Else → default/fallback
+
+Elif → extra conditions
+
+Decide → execute only if True
+
+True/False → boolean logic
+
+Clearly → keep code readable

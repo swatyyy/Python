@@ -1,0 +1,159 @@
+🔄 Loops & Iterations in Python
+1. What is a Loop?
+
+A loop lets you repeat code multiple times until a condition is met or until you run out of items to process.
+👉 Without loops → you repeat code manually.
+👉 With loops → Python does repetition for you.
+
+2. Types of Loops
+🔹 for loop – iterate over a sequence (list, string, range, etc.)
+for i in range(5):
+    print(i)   # 0,1,2,3,4
+
+
+range(n) → generates numbers from 0 to n-1.
+
+Commonly used when you know how many times you need to loop.
+
+🔹 while loop – repeat while condition is True
+x = 0
+while x < 5:
+    print(x)
+    x += 1
+
+
+Used when you don’t know how many times in advance.
+
+3. Loop Control Keywords
+
+break → stop loop immediately.
+
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+
+
+continue → skip current iteration.
+
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+
+
+pass → do nothing (placeholder).
+
+for i in range(3):
+    pass
+
+
+else with loops → runs if loop ends naturally (not via break).
+
+for i in range(3):
+    print(i)
+else:
+    print("Loop finished!")
+
+4. Iteration Over Different Objects
+
+List:
+
+for fruit in ["apple", "banana", "mango"]:
+    print(fruit)
+
+
+String:
+
+for ch in "Python":
+    print(ch)
+
+
+Dictionary:
+
+student = {"name": "Swathy", "age": 30}
+for key, value in student.items():
+    print(key, ":", value)
+
+5. Smart Things to Know
+
+✅ Use range(start, stop, step) for numbers.
+
+for i in range(2, 10, 2):  # even numbers
+    print(i)
+
+
+✅ Use enumerate() for index + value.
+
+names = ["A", "B", "C"]
+for index, value in enumerate(names):
+    print(index, value)
+
+
+✅ Use zip() to loop over two lists together.
+
+names = ["A", "B", "C"]
+scores = [85, 90, 95]
+for n, s in zip(names, scores):
+    print(n, s)
+
+
+✅ Use list comprehension → shorter + cleaner loop.
+
+squares = [x*x for x in range(5)]
+print(squares)  # [0,1,4,9,16]
+
+6. Do’s & Don’ts
+
+✅ Do’s:
+
+Keep loops short and readable.
+
+Use break to prevent infinite loops.
+
+Use enumerate() & zip() instead of manual index tracking.
+
+Use list comprehensions for creating lists efficiently.
+
+❌ Don’ts:
+
+Don’t forget to update variables in while loops → infinite loop risk.
+
+Don’t use loops when Python already has built-ins (sum(), max(), etc.).
+
+Don’t put heavy tasks inside nested loops unless necessary.
+
+7. Pitfalls to Watch
+
+Infinite loop example:
+
+x = 0
+while x < 5:
+    print(x)   # forgot x += 1 → runs forever
+
+
+Modifying list while iterating → unexpected results.
+
+nums = [1,2,3]
+for n in nums:
+    nums.remove(n)  # BAD
+
+8. Pro Smart Tips
+
+Use any() and all() for conditions instead of manual loops.
+
+nums = [1,2,3,4]
+print(all(n > 0 for n in nums))  # True
+print(any(n > 3 for n in nums))  # True
+
+
+Use generator expressions for memory efficiency:
+
+gen = (x*x for x in range(1000000))
+print(next(gen))  # 0
+print(next(gen))  # 1
+
+
+💡 Golden Rule:
+👉 Use for when looping over known sequences.
+👉 Use while when looping until a condition changes.

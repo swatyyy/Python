@@ -1,0 +1,127 @@
+🔹 Functions in Python — Complete Guide
+✅ What is a Function?
+
+A function is a block of reusable code that performs a specific task.
+
+Helps avoid repetition, improves readability, and makes code modular.
+
+Example:
+
+def greet(name):
+    return f"Hello, {name}!"
+
+📝 Things to Remember
+
+Defining a Function → Use def keyword.
+
+def function_name(parameters):
+    # body
+    return value
+
+
+Return Statement → Functions return None if no return is given.
+
+def add(a, b):
+    return a + b
+
+
+Arguments Types:
+
+Positional arguments (order matters)
+
+Keyword arguments (name=value style)
+
+Default arguments (with default value)
+
+Arbitrary arguments (*args, **kwargs)
+
+Scope:
+
+Variables defined inside a function are local.
+
+Use global keyword to modify global variables.
+
+Use nonlocal in nested functions.
+
+Docstrings → Add explanation inside """ """ under function definition.
+
+def square(x):
+    """This function returns the square of a number."""
+    return x * x
+
+
+Indentation is critical → Function body must be indented.
+
+💡 Smart Things to Know
+
+Functions are first-class citizens → You can pass them as arguments, return them from other functions, and assign them to variables.
+
+def greet(): return "Hello!"
+say = greet
+print(say())  # Hello!
+
+
+Lambda functions (one-liners, anonymous functions):
+
+square = lambda x: x * x
+print(square(5))  # 25
+
+
+Default arguments pitfall → Don’t use mutable objects (like lists/dicts) as default values.
+❌ Bad:
+
+def add_item(item, mylist=[]):
+    mylist.append(item)
+    return mylist
+
+
+✅ Good:
+
+def add_item(item, mylist=None):
+    if mylist is None:
+        mylist = []
+    mylist.append(item)
+    return mylist
+
+
+Recursion → A function can call itself, but always have a base case.
+
+🚫 Do’s and Don’ts
+✅ Do’s:
+
+Use descriptive names (calculate_salary(), not cs()).
+
+Keep functions short and focused (single responsibility).
+
+Use type hints for clarity:
+
+def add(a: int, b: int) -> int:
+    return a + b
+
+❌ Don’ts:
+
+Don’t repeat code inside functions (violates DRY principle).
+
+Don’t overuse global variables (makes debugging hard).
+
+Don’t return multiple unrelated types (confuses readers).
+
+⚡ Must-Not-Forget:
+
+Functions always return something → either a value or None.
+
+Order of parameters:
+positional → *args → default/keyword → **kwargs
+
+Keep an eye on scope (LEGB rule):
+
+Local → inside function
+
+Enclosing → nested function’s scope
+
+Global → defined at top level
+
+Built-in → Python keywords/functions
+
+👉 Pro Tip:
+When debugging functions, print inside first, then replace with proper return. Also, practice writing small helper functions instead of one giant function.
