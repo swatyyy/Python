@@ -54,7 +54,8 @@ Indentation is critical → Function body must be indented.
 
 💡 Smart Things to Know
 
-Functions are first-class citizens → You can pass them as arguments, return them from other functions, and assign them to variables.
+Functions are first-class citizens → You can pass them as arguments,
+return them from other functions, and assign them to variables.
 
 def greet(): return "Hello!"
 say = greet
