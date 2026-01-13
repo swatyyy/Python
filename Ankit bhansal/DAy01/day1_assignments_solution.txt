@@ -1,0 +1,228 @@
+Assignment 1: Compound Interest with Total Amount
+
+Write a program which takes 3 inputs from user as:
+
+* Principal amount (int)
+* Rate of annual interest (float)
+* Total tenure (in years)
+
+Formula:
+Amount = Principal * (1 + rate/100) ** tenure
+
+Example:
+principal = 100
+interest = 8
+tenure = 2
+Then amount = 100 * 1.08 * 1.08 = 116.64
+
+Solution:
+
+principal = int(input("Enter the principal amount: "))
+rate = float(input("Enter the annual interest rate (%): "))
+tenure = int(input("Enter the tenure in years: "))
+
+amount = principal * ((1 + rate / 100) ** tenure)
+print("Total amount after", tenure, "years is:", round(amount, 2))
+
+---
+
+Assignment 2: Odd or Even
+
+Ask the user to enter a number. Print whether the number is even or odd.
+
+Solution:
+
+num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+print("Even Number")
+else:
+print("Odd Number")
+
+---
+
+Assignment 3: Age Group Checker
+
+Ask the user to enter their age.
+If age is:
+
+* less than 13 → print "Child"
+* between 13 and 19 → print "Teenager"
+* 20 or more → print "Adult"
+
+Solution:
+
+age = int(input("Enter your age: "))
+
+if age < 13:
+print("Child")
+elif age <= 19:
+print("Teenager")
+else:
+print("Adult")
+
+---
+
+Assignment 4: Simple Login System
+
+Create two variables:
+username = "admin"
+password = "1234"
+
+Ask the user to input username and password.
+If both match, print “Login successful”, else “Invalid credentials”.
+
+Solution:
+
+username = "admin"
+password = "1234"
+
+entered_username = input("Enter username: ")
+entered_password = input("Enter password: ")
+
+if entered_username == username and entered_password == password:
+print("Login successful")
+else:
+print("Invalid credentials")
+
+---
+
+Assignment 5: Find the Largest Number
+
+Ask the user to enter three numbers a, b, c
+Print the largest among them.
+
+Solution:
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+if a >= b and a >= c:
+print("Largest number is:", a)
+elif b >= a and b >= c:
+print("Largest number is:", b)
+else:
+print("Largest number is:", c)
+
+---
+
+Assignment 6: Temperature Converter
+
+Ask the user to enter temperature in Celsius
+Convert it to Fahrenheit using the formula:
+Fahrenheit = (Celsius × 9/5) + 32
+Print the result like: "37°C is equal to 98.6°F"
+
+Solution:
+
+celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = (celsius * 9 / 5) + 32
+
+print(f"{celsius}°C is equal to {fahrenheit}°F")
+
+---
+
+Assignment 7: Number Type Checker
+
+Ask the user to input a number.
+Print whether it is:
+
+* Positive
+* Negative
+* Zero
+
+Solution:
+
+num = float(input("Enter a number: "))
+
+if num > 0:
+print("Positive number")
+elif num < 0:
+print("Negative number")
+else:
+print("Zero")
+
+---
+
+Assignment 8: Password Strength Checker
+
+Ask the user to enter a password.
+If the password is:
+
+* Less than 6 characters → print "Weak Password"
+* 6–10 characters → print "Moderate Password"
+* More than 10 characters → print "Strong Password"
+
+Use len() function to get password length.
+
+Solution:
+
+password = input("Enter your password: ")
+length = len(password)
+
+if length < 6:
+print("Weak Password")
+elif length <= 10:
+print("Moderate Password")
+else:
+print("Strong Password")
+
+---
+
+Assignment 9: Leap Year Checker
+
+Ask the user to enter a year.
+Print whether it is a leap year or not.
+
+Leap year rules:
+
+* Year must be divisible by 4
+* Not divisible by 100 unless also divisible by 400
+
+Solution:
+
+year = int(input("Enter a year: "))
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+print("Leap year")
+else:
+print("Not a leap year")
+
+---
+
+Assignment 10: Bill Splitter with Tip
+
+Ask the user to input:
+
+* Total bill amount
+* Tip percentage (e.g., 10 for 10%)
+* Number of people
+
+Calculate:
+
+* Tip amount = (bill × tip %) / 100
+* Total amount = bill + tip
+* Per person share = total amount / number of people
+
+Print all three values clearly.
+
+Example Output:
+Tip: ₹100.0
+Total Bill (with tip): ₹1100.0
+Each person should pay: ₹275.0
+
+Solution:
+
+bill = float(input("Enter total bill amount: "))
+tip_percent = float(input("Enter tip percentage: "))
+people = int(input("Enter number of people: "))
+
+tip = (bill * tip_percent) / 100
+total = bill + tip
+per_person = total / people
+
+print("Tip: ₹", round(tip, 2))
+print("Total Bill (with tip): ₹", round(total, 2))
+print("Each person should pay: ₹", round(per_person, 2))
+
